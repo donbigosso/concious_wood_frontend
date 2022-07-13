@@ -4,8 +4,7 @@ import MyNavbar from "./components/MyNavbar";
 import Container from "react-bootstrap/Container";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
-import Bikes from "./pages/Bikes";
-import Terms from "./pages/Terms";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 import React, { useState, useEffect } from "react";
@@ -62,12 +61,10 @@ function App() {
       return <HomePage language={language} />;
     } else if (pageName === "about") {
       return <AboutUs language={language} />;
-    } else if (pageName === "bikes") {
-      return <Bikes language={language} />;
+    } else if (pageName === "projects") {
+      return <Projects language={language} />;
     } else if (pageName === "contact") {
       return <Contact language={language} />;
-    } else if (pageName === "terms") {
-      return <Terms language={language} />;
     }
   };
 
@@ -88,7 +85,7 @@ function App() {
             polish={() => changeLanguage("PL")}
             home={() => setpage("home")}
             about={() => setpage("about")}
-            bikes={() => setpage("bikes")}
+            projects={() => setpage("projects")}
             terms={() => setpage("terms")}
             contact={() => setpage("contact")}
           />

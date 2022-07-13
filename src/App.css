@@ -1,10 +1,9 @@
 body {
-  background-image: "%PUBLIC_URL%/data/assets/pexels-fwstudio-172292.jpg";
   background-color: #c56031;
 }
 
 .brightBeckground {
-  background-color: #bac2bb;
+  background-color: #ffcf88;
   min-height: 600px;
 }
 
@@ -13,10 +12,13 @@ body {
   max-height: 300px;
   margin: 5px;
 }
-
+h2 {
+  padding: 1em;
+}
 p {
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 5px;
+  text-indent: 1em;
 }
 
 .forTablesLists {
@@ -72,4 +74,9 @@ p {
 
 .forTablesLists {
   margin-right: 10px;
+}
+
+.contactPic {
+  width: 100%;
+  border-radius: 10px;
 }

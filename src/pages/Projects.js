@@ -1,37 +1,49 @@
 import React from "react";
 import GetStringFromJSON from "../components/GetStringFromJSON";
 import { Animated } from "react-animated-css";
-export default function AboutUs(props) {
+export default function Projects(props) {
   return (
     <div className="brightBeckground">
       <Animated animationIn="fadeIn" isVisible={true}>
         <h2>
           <GetStringFromJSON
-            stringID="about_header"
+            stringID="projects_header"
             language={props.language}
           />
         </h2>
         <p>
+          <b>
+            <GetStringFromJSON
+              stringID="projects_bold_01"
+              language={props.language}
+            />
+          </b>
           <GetStringFromJSON
-            stringID="about_par_01"
+            stringID="projects_par_01"
             language={props.language}
           />
         </p>
         <p>
+          <b>
+            <GetStringFromJSON
+              stringID="projects_bold_02"
+              language={props.language}
+            />
+          </b>
           <GetStringFromJSON
-            stringID="about_par_02"
+            stringID="projects_par_02"
             language={props.language}
           />
         </p>
         <p>
+          <b>
+            <GetStringFromJSON
+              stringID="projects_bold_03"
+              language={props.language}
+            />
+          </b>
           <GetStringFromJSON
-            stringID="about_par_03"
-            language={props.language}
-          />
-        </p>
-        <p>
-          <GetStringFromJSON
-            stringID="about_par_04"
+            stringID="projects_par_03"
             language={props.language}
           />
         </p>
