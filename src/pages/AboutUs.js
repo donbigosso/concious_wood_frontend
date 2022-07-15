@@ -1,6 +1,7 @@
 import React from "react";
 import GetStringFromJSON from "../components/GetStringFromJSON";
 import { Animated } from "react-animated-css";
+import Mini02 from "../images/mini_02.jpg";
 export default function AboutUs(props) {
   return (
     <div className="brightBeckground">
@@ -11,6 +12,7 @@ export default function AboutUs(props) {
             language={props.language}
           />
         </h2>
+        <img src={Mini02} className="miniature300" />
         <p>
           <GetStringFromJSON
             stringID="about_par_01"

@@ -55,7 +55,7 @@ function App() {
     setPageLanguage(languageCode);
     //document.cookie = "language={languageCode}";
   };
-  console.log(document.cookie);
+
   const generatePage = (pageName) => {
     if (pageName === "home") {
       return <HomePage language={language} />;

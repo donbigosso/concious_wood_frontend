@@ -50,6 +50,7 @@ p {
   height: 1.2rem;
   margin-right: 0.3rem;
   cursor: pointer;
+  border-radius: 3px;
   /*  border: 2px solid red; */
 }
 
@@ -79,4 +80,11 @@ p {
 .contactPic {
   width: 100%;
   border-radius: 10px;
+}
+
+.miniature300 {
+  border-radius: 10px;
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
 }

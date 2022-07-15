@@ -27,7 +27,7 @@ export default function MyCarousel({ english, german, polish, ...props }) {
   };
   return (
     <div>
-      <div className="newLgField">
+      {/*<div className="newLgField">
         <img
           className="flag"
           src={BritainFlag}
@@ -46,7 +46,7 @@ export default function MyCarousel({ english, german, polish, ...props }) {
           onClick={polish}
           style={Object.assign(drawPlFalgFrame())}
         />
-      </div>
+  </div> */}
       <Carousel>
         <Carousel.Item>
           <img
