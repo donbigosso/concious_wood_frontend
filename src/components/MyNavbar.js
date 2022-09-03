@@ -44,8 +44,30 @@ export default function MyNavbar({
                 language={props.language}
               />
             </Nav.Link>
+            <NavDropdown
+              title={
+                <GetStringFromJSON
+                  stringID="projects_header"
+                  language={props.language}
+                />
+              }
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item className="pointer">
+                <GetStringFromJSON
+                  stringID="black_pine_header"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
+              <NavDropdown.Item className="pointer">
+                <GetStringFromJSON
+                  stringID="rental_terms"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
+            </NavDropdown>
 
-            <Nav.Link className="pointer" onClick={contact}>
+            <Nav.Link className="pointer">
               <GetStringFromJSON
                 stringID="contact_header"
                 language={props.language}
