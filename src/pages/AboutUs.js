@@ -12,7 +12,7 @@ export default function AboutUs(props) {
             language={props.language}
           />
         </h2>
-        <img src={Mini02} className="miniature300" />
+        <img src={Mini02} className="miniature" />
         <p>
           <GetStringFromJSON
             stringID="about_par_01"

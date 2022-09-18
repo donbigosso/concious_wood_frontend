@@ -3,7 +3,8 @@ import MyNavbar from "../components/MyNavbar";
 import Container from "react-bootstrap/Container";
 import HomePage from "../pages/HomePage";
 import AboutUs from "../pages/AboutUs";
-import Projects from "../pages/Projects";
+import BlackPine from "../pages/BlackPine";
+import NutTale from "../pages/NutTale";
 import Contact from "../pages/Contact";
 import { getCookie, getLanguageCookie, generatePage } from "../functions";
 
@@ -37,8 +38,10 @@ function App() {
       return <HomePage language={language} />;
     } else if (pageName === "about") {
       return <AboutUs language={language} />;
-    } else if (pageName === "projects") {
-      return <Projects language={language} />;
+    } else if (pageName === "blackPine") {
+      return <BlackPine language={language} />;
+    } else if (pageName === "nutTale") {
+      return <NutTale language={language} />;
     } else if (pageName === "contact") {
       return <Contact language={language} />;
     }
@@ -61,7 +64,8 @@ function App() {
             polish={() => changeLanguage("PL")}
             home={() => setpage("home")}
             about={() => setpage("about")}
-            projects={() => setpage("projects")}
+            blackPine={() => setpage("blackPine")}
+            nutTale={() => setpage("nutTale")}
             terms={() => setpage("terms")}
             contact={() => setpage("contact")}
           />

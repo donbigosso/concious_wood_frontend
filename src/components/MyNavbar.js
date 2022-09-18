@@ -9,7 +9,8 @@ import { Animated } from "react-animated-css";
 export default function MyNavbar({
   home,
   about,
-  projects,
+  blackPine,
+  nutTale,
   contact,
   terms,
   ...props
@@ -19,7 +20,7 @@ export default function MyNavbar({
       <style type="text/css">
         {`
     .navbar-dark {
-      background-color: #251207;
+      background-color: #00000;
       color: white;
     }
    
@@ -38,12 +39,7 @@ export default function MyNavbar({
                 language={props.language}
               />
             </Nav.Link>
-            <Nav.Link className="pointer" onClick={projects}>
-              <GetStringFromJSON
-                stringID="projects_header"
-                language={props.language}
-              />
-            </Nav.Link>
+
             <NavDropdown
               title={
                 <GetStringFromJSON
@@ -53,15 +49,21 @@ export default function MyNavbar({
               }
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item className="pointer">
+              <NavDropdown.Item className="pointer" onClick={blackPine}>
                 <GetStringFromJSON
                   stringID="black_pine_header"
                   language={props.language}
                 />
               </NavDropdown.Item>
+              <NavDropdown.Item className="pointer" onClick={nutTale}>
+                <GetStringFromJSON
+                  stringID="nut_tale_header"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
               <NavDropdown.Item className="pointer">
                 <GetStringFromJSON
-                  stringID="rental_terms"
+                  stringID="oak_header"
                   language={props.language}
                 />
               </NavDropdown.Item>

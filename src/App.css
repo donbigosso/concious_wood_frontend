@@ -1,9 +1,10 @@
 body {
   background-color: #c56031;
+  color: white;
 }
 
 .brightBeckground {
-  background-color: #ffcf88;
+  background-color: #525252;
   min-height: 600px;
 }
 
@@ -35,9 +36,8 @@ p {
 
 .navBackground {
   width: 100%;
-  background-color: #251207;
+  background-color: #000000;
 }
-
 .languageField {
   height: 1.8rem;
 
@@ -82,9 +82,10 @@ p {
   border-radius: 10px;
 }
 
-.miniature300 {
-  border-radius: 10px;
-  float: left;
-  margin-right: 5px;
-  margin-left: 5px;
+.miniature {
+  margin-bottom: 1em;
+}
+
+.leftCol {
+  text-align: justify;
 }
