@@ -11,6 +11,7 @@ export default function MyNavbar({
   about,
   blackPine,
   nutTale,
+  oak,
   contact,
   terms,
   ...props
@@ -61,7 +62,7 @@ export default function MyNavbar({
                   language={props.language}
                 />
               </NavDropdown.Item>
-              <NavDropdown.Item className="pointer">
+              <NavDropdown.Item className="pointer" onClick={oak}>
                 <GetStringFromJSON
                   stringID="oak_header"
                   language={props.language}

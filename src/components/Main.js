@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import AboutUs from "../pages/AboutUs";
 import BlackPine from "../pages/BlackPine";
 import NutTale from "../pages/NutTale";
+import Oak from "../pages/Oak";
 import Contact from "../pages/Contact";
 import { getCookie, getLanguageCookie, generatePage } from "../functions";
 
@@ -42,6 +43,8 @@ function App() {
       return <BlackPine language={language} />;
     } else if (pageName === "nutTale") {
       return <NutTale language={language} />;
+    } else if (pageName === "oak") {
+      return <Oak language={language} />;
     } else if (pageName === "contact") {
       return <Contact language={language} />;
     }
@@ -65,6 +68,7 @@ function App() {
             home={() => setpage("home")}
             about={() => setpage("about")}
             blackPine={() => setpage("blackPine")}
+            oak={() => setpage("oak")}
             nutTale={() => setpage("nutTale")}
             terms={() => setpage("terms")}
             contact={() => setpage("contact")}
