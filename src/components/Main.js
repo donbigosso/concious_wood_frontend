@@ -8,7 +8,6 @@ import NutTale from "../pages/NutTale";
 import Oak from "../pages/Oak";
 import Contact from "../pages/Contact";
 import { getCookie, getLanguageCookie, generatePage } from "../functions";
-
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -33,6 +32,15 @@ function App() {
     setPageLanguage(languageCode);
     //document.cookie = "language={languageCode}";
   };
+
+  useEffect(() => {
+    const selPageCookie = getCookie("selectedPage");
+    if (selPageCookie !== "") {
+      setpage(selPageCookie);
+    } else {
+      console.log("Cookie test: none");
+    }
+  }, []);
 
   const generatePage = (pageName) => {
     if (pageName === "home") {
@@ -65,13 +73,34 @@ function App() {
             english={() => changeLanguage("EN")}
             german={() => changeLanguage("DE")}
             polish={() => changeLanguage("PL")}
-            home={() => setpage("home")}
-            about={() => setpage("about")}
-            blackPine={() => setpage("blackPine")}
-            oak={() => setpage("oak")}
-            nutTale={() => setpage("nutTale")}
-            terms={() => setpage("terms")}
-            contact={() => setpage("contact")}
+            home={() => {
+              setpage("home");
+              setCookie("selectedPage", "home", 14);
+            }}
+            about={() => {
+              setpage("about");
+              setCookie("selectedPage", "about", 14);
+            }}
+            blackPine={() => {
+              setpage("blackPine");
+              setCookie("selectedPage", "blackPine", 14);
+            }}
+            oak={() => {
+              setpage("oak");
+              setCookie("selectedPage", "oak", 14);
+            }}
+            nutTale={() => {
+              setpage("nutTale");
+              setCookie("selectedPage", "nutTale", 14);
+            }}
+            terms={() => {
+              setpage("terms");
+              setCookie("selectedPage", "terms", 14);
+            }}
+            contact={() => {
+              setpage("contact");
+              setCookie("selectedPage", "contact", 14);
+            }}
           />
         </Container>
       </div>

@@ -32,8 +32,6 @@ export default function TextFormatter(props) {
           newArr[index][1] = "";
         }
       });
-
-      console.log(newArr);
     } else {
       newArr = [string];
     }

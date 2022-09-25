@@ -25,7 +25,7 @@ export default function Contact(props) {
               <img src={ContactPic} className="contactPic"></img>
             </Col>
             <Col md={6}>
-              <Table bordered hover>
+              <Table bordered hover variant="dark">
                 <tbody>
                   <tr>
                     <td>

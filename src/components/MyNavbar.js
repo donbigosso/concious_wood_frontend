@@ -14,6 +14,7 @@ export default function MyNavbar({
   oak,
   contact,
   terms,
+
   ...props
 }) {
   return (
@@ -70,7 +71,7 @@ export default function MyNavbar({
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link className="pointer">
+            <Nav.Link className="pointer" onClick={contact}>
               <GetStringFromJSON
                 stringID="contact_header"
                 language={props.language}
