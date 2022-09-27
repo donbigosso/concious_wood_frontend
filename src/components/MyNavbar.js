@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import GetStringFromJSON from "../components/GetStringFromJSON";
+import { BsGlobe } from "react-icons/bs";
 
 import { Animated } from "react-animated-css";
 
@@ -14,7 +15,7 @@ export default function MyNavbar({
   oak,
   contact,
   terms,
-
+  lang,
   ...props
 }) {
   return (
@@ -74,6 +75,13 @@ export default function MyNavbar({
             <Nav.Link className="pointer" onClick={contact}>
               <GetStringFromJSON
                 stringID="contact_header"
+                language={props.language}
+              />
+            </Nav.Link>
+            <Nav.Link className="pointer" onClick={lang}>
+              <BsGlobe />
+              <GetStringFromJSON
+                stringID="language_menu"
                 language={props.language}
               />
             </Nav.Link>
