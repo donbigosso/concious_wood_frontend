@@ -3,12 +3,13 @@ import GetStringFromJSON from "../components/GetStringFromJSON";
 import Table from "react-bootstrap/Table";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import ContactPic from "../images/contact.jpg";
+import PagePicture from "../components/PagePicture";
+
 import { HiOutlineMailOpen } from "react-icons/hi";
 
 import { BsWhatsapp } from "react-icons/bs";
 import { Animated } from "react-animated-css";
-
+const testLink = process.env.PUBLIC_URL + "/API.php";
 export default function Contact(props) {
   return (
     <div className="brightBeckground">
@@ -22,7 +23,7 @@ export default function Contact(props) {
         <div className="forTablesLists">
           <Row>
             <Col md={6}>
-              <img src={ContactPic} className="contactPic"></img>
+              <PagePicture imageName="contact" customClassName="contactPic" />
             </Col>
             <Col md={6}>
               <Table bordered hover variant="dark">
@@ -40,6 +41,12 @@ export default function Contact(props) {
                     </td>
 
                     <td>0-700-772-772</td>
+                  </tr>
+                  <tr>
+                    <td>Test</td>
+                    <td>
+                      <a href={testLink}>Link</a>
+                    </td>
                   </tr>
                 </tbody>
               </Table>

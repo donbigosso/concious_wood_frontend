@@ -2,10 +2,9 @@ import React from "react";
 
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import black_pine_min_01 from "../images/black_pine_min_01.jpg";
-import black_pine_min_02 from "../images/black_pine_min_02.jpg";
-import black_pine_min_03 from "../images/black_pine_min_03.jpg";
+import { Container, Row, Col } from "react-bootstrap";
+
+import PagePicture from "../components/PagePicture";
 export default function BlackPine(props) {
   return (
     <div className="brightBeckground">
@@ -29,18 +28,10 @@ export default function BlackPine(props) {
               </p>
             </Col>
             <Col md={6} className="rightCol ">
-              <Image
-                src={black_pine_min_01}
-                className="rounded mx-auto d-block miniature"
-              />
-              <Image
-                src={black_pine_min_02}
-                className="rounded mx-auto d-block miniature"
-              />
-              <Image
-                src={black_pine_min_03}
-                className="rounded mx-auto d-block miniature"
-              />
+              <PagePicture imageName="black_pine_min_01" />
+              <PagePicture imageName="black_pine_min_02" />
+              <PagePicture imageName="black_pine_min_03" />
+
               {/*<img src={black_pine_min_02} className="miniature" />
               <img src={black_pine_min_03} className="miniature" />*/}
             </Col>

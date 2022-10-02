@@ -86,3 +86,7 @@ p {
 .leftCol {
   text-align: justify;
 }
+
+.test {
+  border: 3px solid red;
+}
