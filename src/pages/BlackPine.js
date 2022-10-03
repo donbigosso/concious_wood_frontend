@@ -3,7 +3,6 @@ import React from "react";
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col } from "react-bootstrap";
-
 import PagePicture from "../components/PagePicture";
 export default function BlackPine(props) {
   return (

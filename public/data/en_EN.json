@@ -3,7 +3,7 @@
   "black_pine_header": "Pine in black",
   "nut_tale_header": "Tale of the Nut",
   "oak_header": "Oak",
-  "home_par_01": "Conscious wood is a concept that goes towards stable and what we call mature wood. Wood that is tired that wants to rest, wood that we can make an appointment with that we can trust. In the same way, it is wood that has a history and can tell us something about its past life.",
+  "home_par_01": "<b>Conscious wood</b> is a concept that goes towards stable and what we call mature wood. Wood that is tired that wants to rest, wood that we can make an appointment with that we can trust. In the same way, it is wood that has a history and can tell us something about its past life.",
   "home_par_02": "We really like the idea of giving wood another life because it is interesting, beautiful and at the same time ecological. Ecology equals awareness. Conscious people choose conscious material.",
   "home_par_03": "We are constantly striving for awareness. Our materials are lonely, abandoned, old, not needed by anyone, sometimes there are also \"new\" everyday objects made of wood and metal.",
   "about_header": "About us",
@@ -18,5 +18,8 @@
   "oak_par_01": "<b>The Oak</b> has a more interesting story because it was bought back from a villager who wanted to cut it up for firewood. We rescued the material that someone wanted to waste. We packed the tree into the car and drove it to the sawmill where it was cut, then took it to the drying room where it dried as a giant.",
   "contact_header": "Contact",
   "galery_header": "Galery",
-  "language_menu": "Language"
+  "language_menu": "Language",
+  "lng_eng": "English",
+  "lng_pol": "Polish",
+  "lng_ger": "German"
 }

@@ -16,6 +16,8 @@ export default function MyNavbar({
   contact,
   terms,
   lang,
+  english,
+  polish,
   ...props
 }) {
   return (
@@ -78,13 +80,32 @@ export default function MyNavbar({
                 language={props.language}
               />
             </Nav.Link>
-            <Nav.Link className="pointer" onClick={lang}>
-              <BsGlobe />
-              <GetStringFromJSON
-                stringID="language_menu"
-                language={props.language}
-              />
-            </Nav.Link>
+            <NavDropdown
+              className="pointer"
+              onClick={lang}
+              title={
+                <>
+                  <BsGlobe />
+                  <GetStringFromJSON
+                    stringID="language_menu"
+                    language={props.language}
+                  />
+                </>
+              }
+            >
+              <NavDropdown.Item className="pointer" onClick={english}>
+                <GetStringFromJSON
+                  stringID="lng_eng"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
+              <NavDropdown.Item className="pointer" onClick={polish}>
+                <GetStringFromJSON
+                  stringID="lng_pol"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

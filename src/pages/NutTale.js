@@ -6,6 +6,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import nut_tale_min_01 from "../images/nut_tale_min_01.jpg";
 import nut_tale_min_02 from "../images/nut_tale_min_02.jpg";
 import nut_tale_min_03 from "../images/nut_tale_min_03.jpg";
+import PagePicture from "../components/PagePicture";
 export default function NutTale(props) {
   return (
     <div className="brightBeckground">
@@ -29,24 +30,15 @@ export default function NutTale(props) {
               </p>
             </Col>
             <Col md={6} className="rightCol ">
-              <Image
-                src={nut_tale_min_01}
-                className="rounded mx-auto d-block miniature"
-              />
+              <PagePicture imageName="nut_tale_min_01" />
             </Col>
           </Row>
           <Row>
             <Col md={6} className="leftCol">
-              <Image
-                src={nut_tale_min_02}
-                className="rounded mx-auto d-block miniature"
-              />
+              <PagePicture imageName="nut_tale_min_02" />
             </Col>
             <Col md={6} className="leftCol">
-              <Image
-                src={nut_tale_min_03}
-                className="rounded mx-auto d-block miniature"
-              />
+              <PagePicture imageName="nut_tale_min_03" />
             </Col>
           </Row>
 

@@ -23,7 +23,7 @@ export default function Contact(props) {
         <div className="forTablesLists">
           <Row>
             <Col md={6}>
-              <PagePicture imageName="contact" customClassName="contactPic" />
+              <PagePicture imageName="contact" className="contactPic" />
             </Col>
             <Col md={6}>
               <Table bordered hover variant="dark">
