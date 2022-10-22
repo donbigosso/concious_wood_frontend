@@ -26,13 +26,16 @@ export default function BlackPine(props) {
                 />
               </p>
             </Col>
-            <Col md={6} className="rightCol ">
+            <Col md={6} className="rightCol">
               <PagePicture imageName="black_pine_min_01" />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6} className="leftCol">
               <PagePicture imageName="black_pine_min_02" />
+            </Col>
+            <Col md={6} className="rightCol ">
               <PagePicture imageName="black_pine_min_03" />
-
-              {/*<img src={black_pine_min_02} className="miniature" />
-              <img src={black_pine_min_03} className="miniature" />*/}
             </Col>
           </Row>
         </Container>
