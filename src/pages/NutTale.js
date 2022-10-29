@@ -3,10 +3,9 @@ import React from "react";
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import nut_tale_min_01 from "../images/nut_tale_min_01.jpg";
-import nut_tale_min_02 from "../images/nut_tale_min_02.jpg";
-import nut_tale_min_03 from "../images/nut_tale_min_03.jpg";
+
 import PagePicture from "../components/PagePicture";
+import PagePictureRemote from "../components/PagePictureRemote";
 export default function NutTale(props) {
   return (
     <div className="brightBeckground">
@@ -30,7 +29,10 @@ export default function NutTale(props) {
               </p>
             </Col>
             <Col md={6} className="rightCol ">
-              <PagePicture imageName="nut_tale_min_01" />
+              <PagePictureRemote
+                imageID="nut_tale_01"
+                imageName="nut_tale_min_01"
+              />
             </Col>
           </Row>
           <Row>
@@ -41,9 +43,6 @@ export default function NutTale(props) {
               <PagePicture imageName="nut_tale_min_03" />
             </Col>
           </Row>
-
-          {/*<img src={black_pine_min_02} className="miniature" />
-              <img src={black_pine_min_03} className="miniature" />*/}
         </Container>
       </Animated>
     </div>
