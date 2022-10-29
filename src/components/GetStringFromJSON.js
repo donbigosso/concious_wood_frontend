@@ -7,9 +7,9 @@ export default function GetStringFromJSON(props) {
   const plDataPAck = "http://motorbikes.polafri.pl/api/pl_PL.json";
   const deDataPAck = "http://motorbikes.polafri.pl/api/de_DE.json"; */
 
-  const enDataPAck = "/data/en_EN.json"; //this to be changed to a proper location
-  const plDataPAck = "/data/pl_PL.json";
-  const deDataPAck = "/data/de_DE.json";
+  const enDataPAck = process.env.PUBLIC_URL + "/data/en_EN.json"; //this to be changed to a proper location
+  const plDataPAck = process.env.PUBLIC_URL + "/data/pl_PL.json";
+  const deDataPAck = process.env.PUBLIC_URL + "/data/de_DE.json";
 
   const newNoCache = Math.round(Date.now() / 100000);
 
