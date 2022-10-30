@@ -90,3 +90,14 @@ p {
 .test {
   border: 3px solid red;
 }
+
+.imageLoader {
+  width: 368px;
+  height: 460px;
+  background-color: #3f3f3f;
+  padding: 1em;
+}
+
+.redText {
+  color: rgb(219, 43, 43);
+}

@@ -3,7 +3,8 @@ import React from "react";
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col } from "react-bootstrap";
-import PagePicture from "../components/PagePicture";
+
+import PagePictureRemote from "../components/PagePictureRemote";
 export default function BlackPine(props) {
   return (
     <div className="brightBeckground">
@@ -27,15 +28,15 @@ export default function BlackPine(props) {
               </p>
             </Col>
             <Col md={6} className="rightCol">
-              <PagePicture imageName="black_pine_min_01" />
+              <PagePictureRemote imageID="black_pine_01" />
             </Col>
           </Row>
           <Row>
             <Col md={6} className="leftCol">
-              <PagePicture imageName="black_pine_min_02" />
+              <PagePictureRemote imageID="black_pine_02" />
             </Col>
             <Col md={6} className="rightCol ">
-              <PagePicture imageName="black_pine_min_03" />
+              <PagePictureRemote imageID="black_pine_03" />
             </Col>
           </Row>
         </Container>

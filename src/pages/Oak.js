@@ -2,8 +2,8 @@ import React from "react";
 
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import PagePicture from "../components/PagePicture";
+import { Container, Row, Col } from "react-bootstrap";
+import PagePictureRemote from "../components/PagePictureRemote";
 export default function Oak(props) {
   return (
     <div className="brightBeckground">
@@ -27,15 +27,15 @@ export default function Oak(props) {
               </p>
             </Col>
             <Col md={6} className="rightCol ">
-              <PagePicture imageName="oak_min_01" />
+              <PagePictureRemote imageID="oak_01" />
             </Col>
           </Row>
           <Row>
             <Col md={6} className="leftCol">
-              <PagePicture imageName="oak_min_02" />
+              <PagePictureRemote imageID="oak_02" />
             </Col>
             <Col md={6} className="leftCol">
-              <PagePicture imageName="oak_min_03" />
+              <PagePictureRemote imageID="oak_03" />
             </Col>
           </Row>
 

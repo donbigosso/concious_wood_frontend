@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import PagePicture from "../components/PagePicture";
 
 import { HiOutlineMailOpen } from "react-icons/hi";
-
+import PagePictureRemote from "../components/PagePictureRemote";
 import { BsWhatsapp } from "react-icons/bs";
 import { Animated } from "react-animated-css";
 const testLink = process.env.PUBLIC_URL + "/API.php";
@@ -23,7 +23,7 @@ export default function Contact(props) {
         <div className="forTablesLists">
           <Row>
             <Col md={6}>
-              <PagePicture imageName="contact" className="contactPic" />
+              <PagePictureRemote imageID="contact_pic" className="contactPic" />
             </Col>
             <Col md={6}>
               <Table bordered hover variant="dark">
