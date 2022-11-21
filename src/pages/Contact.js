@@ -35,19 +35,19 @@ export default function Contact(props) {
 
                     <td>csw@consciouswood.com</td>
                   </tr>
-                  <tr>
+                  {/*<tr>
                     <td>
                       <BsWhatsapp />
                     </td>
 
                     <td>0-700-772-772</td>
-                  </tr>
+  </tr> 
                   <tr>
                     <td>Test</td>
                     <td>
                       <a href={testLink}>Link</a>
                     </td>
-                  </tr>
+                  </tr>*/}
                 </tbody>
               </Table>
             </Col>

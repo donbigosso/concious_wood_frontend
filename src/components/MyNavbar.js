@@ -18,6 +18,7 @@ export default function MyNavbar({
   lang,
   english,
   polish,
+  german,
   ...props
 }) {
   return (
@@ -102,6 +103,12 @@ export default function MyNavbar({
               <NavDropdown.Item className="pointer" onClick={polish}>
                 <GetStringFromJSON
                   stringID="lng_pol"
+                  language={props.language}
+                />
+              </NavDropdown.Item>
+              <NavDropdown.Item className="pointer" onClick={german}>
+                <GetStringFromJSON
+                  stringID="lng_ger"
                   language={props.language}
                 />
               </NavDropdown.Item>
