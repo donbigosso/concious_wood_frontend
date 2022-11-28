@@ -1,21 +1,19 @@
 import React from "react";
-import GetStringFromJSON from "../components/GetStringFromJSON";
+import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import Table from "react-bootstrap/Table";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import PagePicture from "../components/PagePicture";
-
 import { HiOutlineMailOpen } from "react-icons/hi";
 import PagePictureRemote from "../components/PagePictureRemote";
-import { BsWhatsapp } from "react-icons/bs";
+
 import { Animated } from "react-animated-css";
-const testLink = process.env.PUBLIC_URL + "/API.php";
+
 export default function Contact(props) {
   return (
     <div className="brightBeckground">
       <Animated animationIn="fadeIn" isVisible={true}>
         <h2>
-          <GetStringFromJSON
+          <GetStringFromJSONFormat
             stringID="contact_header"
             language={props.language}
           />
@@ -35,19 +33,6 @@ export default function Contact(props) {
 
                     <td>csw@consciouswood.com</td>
                   </tr>
-                  {/*<tr>
-                    <td>
-                      <BsWhatsapp />
-                    </td>
-
-                    <td>0-700-772-772</td>
-  </tr> 
-                  <tr>
-                    <td>Test</td>
-                    <td>
-                      <a href={testLink}>Link</a>
-                    </td>
-                  </tr>*/}
                 </tbody>
               </Table>
             </Col>

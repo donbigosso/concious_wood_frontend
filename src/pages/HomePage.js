@@ -1,8 +1,6 @@
 import React from "react";
-import GetStringFromJSON from "../components/GetStringFromJSON";
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
-
 import PagePicture from "../components/PagePicture";
 import { Container, Row, Col } from "react-bootstrap";
 export default function HomePage(props) {

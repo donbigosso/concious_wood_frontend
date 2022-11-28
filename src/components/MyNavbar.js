@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import GetStringFromJSON from "../components/GetStringFromJSON";
-import { BsGlobe } from "react-icons/bs";
 
-import { Animated } from "react-animated-css";
+import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
+import { BsGlobe } from "react-icons/bs";
 
 export default function MyNavbar({
   home,
@@ -34,13 +33,16 @@ export default function MyNavbar({
       </style>
       <Navbar expand="lg" variant="dark">
         <Navbar.Brand onClick={home} className="pointer">
-          <GetStringFromJSON stringID="home_header" language={props.language} />
+          <GetStringFromJSONFormat
+            stringID="home_header"
+            language={props.language}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className="pointer" onClick={about}>
-              <GetStringFromJSON
+              <GetStringFromJSONFormat
                 stringID="about_header"
                 language={props.language}
               />
@@ -48,7 +50,7 @@ export default function MyNavbar({
 
             <NavDropdown
               title={
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="projects_header"
                   language={props.language}
                 />
@@ -56,19 +58,19 @@ export default function MyNavbar({
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item className="pointer" onClick={blackPine}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="black_pine_header"
                   language={props.language}
                 />
               </NavDropdown.Item>
               <NavDropdown.Item className="pointer" onClick={nutTale}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="nut_tale_header"
                   language={props.language}
                 />
               </NavDropdown.Item>
               <NavDropdown.Item className="pointer" onClick={oak}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="oak_header"
                   language={props.language}
                 />
@@ -76,7 +78,7 @@ export default function MyNavbar({
             </NavDropdown>
 
             <Nav.Link className="pointer" onClick={contact}>
-              <GetStringFromJSON
+              <GetStringFromJSONFormat
                 stringID="contact_header"
                 language={props.language}
               />
@@ -87,7 +89,7 @@ export default function MyNavbar({
               title={
                 <>
                   <BsGlobe />
-                  <GetStringFromJSON
+                  <GetStringFromJSONFormat
                     stringID="language_menu"
                     language={props.language}
                   />
@@ -95,19 +97,19 @@ export default function MyNavbar({
               }
             >
               <NavDropdown.Item className="pointer" onClick={english}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="lng_eng"
                   language={props.language}
                 />
               </NavDropdown.Item>
               <NavDropdown.Item className="pointer" onClick={polish}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="lng_pol"
                   language={props.language}
                 />
               </NavDropdown.Item>
               <NavDropdown.Item className="pointer" onClick={german}>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="lng_ger"
                   language={props.language}
                 />

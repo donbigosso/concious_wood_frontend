@@ -1,5 +1,5 @@
 import React from "react";
-import GetStringFromJSON from "../components/GetStringFromJSON";
+
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col, Image } from "react-bootstrap";
