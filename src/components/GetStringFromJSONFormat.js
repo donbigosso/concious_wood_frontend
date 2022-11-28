@@ -4,13 +4,14 @@ import TextFormatter from "./TextFormatter";
 
 export default function GetStringFromJSONFormat(props) {
   const language = props.language;
-  /*const enDataPAck = "http://motorbikes.polafri.pl/api/en_EN.json"; //this to be changed to a proper location
-  const plDataPAck = "http://motorbikes.polafri.pl/api/pl_PL.json";
-  const deDataPAck = "http://motorbikes.polafri.pl/api/de_DE.json"; */
 
-  const enDataPAck = process.env.PUBLIC_URL + "/data/en_EN.json"; //this to be changed to a proper location
-  const plDataPAck = process.env.PUBLIC_URL + "/data/pl_PL.json";
-  const deDataPAck = process.env.PUBLIC_URL + "/data/de_DE.json";
+  // const enDataPAck = process.env.PUBLIC_URL + "/data/en_EN.json"; //this to be changed to a proper location
+  // const plDataPAck = process.env.PUBLIC_URL + "/data/pl_PL.json";
+  // const deDataPAck = process.env.PUBLIC_URL + "/data/de_DE.json";
+
+  const enDataPAck = "http://consciouswood.com/API/en_EN.json"; //this to be changed to a proper location
+  const plDataPAck = "http://consciouswood.com/API/pl_PL.json";
+  const deDataPAck = "http://consciouswood.com/API/de_DE.json";
 
   const newNoCache = Math.round(Date.now() / 100000);
 

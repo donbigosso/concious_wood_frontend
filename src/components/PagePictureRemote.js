@@ -6,7 +6,8 @@ import axios from "axios";
 export default function PagePictureRemote(props) {
   const newNoCache = Math.round(Date.now() / 100000);
   const pictureFilePath =
-    process.env.PUBLIC_URL + "/data/images.json?noCache=" + { newNoCache };
+    //  process.env.PUBLIC_URL + "/data/images.json?noCache=" + { newNoCache };
+    "http://consciouswood.com/API/images.json?noCache=" + { newNoCache };
   const imageID = props.imageID;
   const customizedClassNames =
     props.className + " rounded mx-auto d-block miniature";

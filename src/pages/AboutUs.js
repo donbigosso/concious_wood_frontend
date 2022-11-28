@@ -1,5 +1,6 @@
 import React from "react";
 import GetStringFromJSON from "../components/GetStringFromJSON";
+import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Mini02 from "../images/mini_02.jpg";
@@ -10,7 +11,7 @@ export default function AboutUs(props) {
         <Container>
           <Row>
             <h2>
-              <GetStringFromJSON
+              <GetStringFromJSONFormat
                 stringID="about_header"
                 language={props.language}
               />
@@ -19,25 +20,25 @@ export default function AboutUs(props) {
           <Row>
             <Col md={6} className="leftCol">
               <p>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="about_par_01"
                   language={props.language}
                 />
               </p>
               <p>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="about_par_02"
                   language={props.language}
                 />
               </p>
               <p>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="about_par_03"
                   language={props.language}
                 />
               </p>
               <p>
-                <GetStringFromJSON
+                <GetStringFromJSONFormat
                   stringID="about_par_04"
                   language={props.language}
                 />
