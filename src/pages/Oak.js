@@ -1,5 +1,4 @@
 import React from "react";
-
 import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -38,9 +37,6 @@ export default function Oak(props) {
               <PagePictureRemote imageID="oak_03" />
             </Col>
           </Row>
-
-          {/*<img src={black_pine_min_02} className="miniature" />
-              <img src={black_pine_min_03} className="miniature" />*/}
         </Container>
       </Animated>
     </div>
