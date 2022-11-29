@@ -43,27 +43,52 @@ export default function NewTextFormatter(props) {
     return indexArray;
   };
 
+  const createIndexesToAction = (indexArray) => {
+    let indexesToAdjust = [];
+    let indexesToRemove1 = [];
+    let indexesToRemove2 = [];
+    indexesToAdjust = indexArray.map((element) => element + 1);
+    indexesToRemove1 = indexArray;
+    indexesToRemove2 = indexArray.map((element) => element + 2);
+    return [indexesToAdjust, indexesToRemove1, indexesToRemove2];
+  };
+
   const markedArray = createMarkedArray(arraySplittedByEnds);
 
-  const printElement = (element, index) => {
-    if (index % 2 == 1) {
-      return <b>{element}</b>;
+  const boldIndexesOfMarkedArray = checkIndexesof(markedArray, "b");
+  console.log(createIndexesToAction(boldIndexesOfMarkedArray));
+
+  const markedArray2 = createIndexesToAction(boldIndexesOfMarkedArray);
+  const printElement2 = (element, index, formatSymbol, formatArray) => {
+    const indexesToAdjust = formatArray[0];
+    const indexesToRemove1 = formatArray[1];
+    const indexesToRemove2 = formatArray[2];
+    if (indexesToAdjust.includes(index)) {
+      return formatSymbol === "b" ? (
+        <span key={index}>
+          <b>{element}</b>
+        </span>
+      ) : formatSymbol === "i" ? (
+        <span key={index}>
+          <i>{element}</i>
+        </span>
+      ) : (
+        <span key={index}>{element}</span>
+      );
+    } else if (indexesToRemove1.includes(index)) {
+      return;
+    } else if (indexesToRemove2.includes(index)) {
+      return;
     } else {
-      return element;
+      return <span key={index}>{element}</span>;
     }
   };
 
-  const printTextFromMarkedArray = (array) => {
-    console.log(array);
-    if (array.length === 1) {
-      return array[0];
-    } else {
-      console.log(checkIndexesof(array, "b"));
-      return "Longer array...";
-    }
-  };
-
-  //console.log(testArray2);
-  //console.log(testResult);
-  return <div>{markedArray.map(printElement)}</div>;
+  return (
+    <div>
+      {markedArray.map((element, index) =>
+        printElement2(element, index, "b", markedArray2)
+      )}
+    </div>
+  );
 }
