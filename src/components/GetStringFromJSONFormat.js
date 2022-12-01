@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TextFormatter from "./TextFormatter";
+import NewTextFormatter from "./NewTextFormatter";
 
 export default function GetStringFromJSONFormat(props) {
   const language = props.language;
@@ -150,5 +151,5 @@ export default function GetStringFromJSONFormat(props) {
     return string;
   };
 
-  return <TextFormatter>{getANewString(stringID)}</TextFormatter>;
+  return <NewTextFormatter>{getANewString(stringID)}</NewTextFormatter>;
 }

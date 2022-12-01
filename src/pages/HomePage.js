@@ -3,7 +3,7 @@ import GetStringFromJSONFormat from "../components/GetStringFromJSONFormat";
 import { Animated } from "react-animated-css";
 import PagePicture from "../components/PagePicture";
 import { Container, Row, Col } from "react-bootstrap";
-import TestComponent from "../components/TestComponent";
+
 export default function HomePage(props) {
   return (
     <div className="brightBeckground">
@@ -41,9 +41,6 @@ export default function HomePage(props) {
                 />
               </p>
             </Col>
-          </Row>
-          <Row>
-            <TestComponent />
           </Row>
         </Container>
       </Animated>

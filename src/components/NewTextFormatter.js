@@ -1,9 +1,14 @@
 import React from "react";
 
 export default function NewTextFormatter(props) {
-  const sourceText = props.children;
-
-  const arraySplittedByBeg = sourceText.split("<");
+  const getSourceText = () => {
+    if (props.children) {
+      return props.children;
+    } else {
+      return "Loading data...";
+    }
+  };
+  const arraySplittedByBeg = getSourceText().split("<");
   const arraySplittedByEndsNew = arraySplittedByBeg.map((entry) =>
     entry.split(">")
   );
@@ -95,10 +100,10 @@ export default function NewTextFormatter(props) {
   };
 
   return (
-    <div>
+    <>
       {markedArray.map((element, index) =>
         printElement(element, index, indexesForActionArray)
       )}
-    </div>
+    </>
   );
 }
