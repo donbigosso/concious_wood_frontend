@@ -2,17 +2,11 @@ import React from "react";
 
 export default function NewTextFormatter(props) {
   const sourceText = props.children;
-  const splitStringBy = (source, element) => {
-    return source.split(element);
-  };
 
-  const subSplitArrayBy = (array, element) => {
-    return array.map((entry) => splitStringBy(entry, element));
-  };
-  const arraySplittedByBeg = splitStringBy(sourceText, "<");
-
-  const arraySplittedByEnds = subSplitArrayBy(arraySplittedByBeg, ">");
-
+  const arraySplittedByBeg = sourceText.split("<");
+  const arraySplittedByEndsNew = arraySplittedByBeg.map((entry) =>
+    entry.split(">")
+  );
   const createMarkedArray = (array) => {
     let newIndex = 0;
     let newArray = [];
@@ -31,53 +25,69 @@ export default function NewTextFormatter(props) {
     return newArray;
   };
 
-  const checkIndexesof = (array, element) => {
-    let indexArray = [];
-    let newIndex = 0;
-    array.forEach((value, index) => {
-      if (value === element) {
-        indexArray[newIndex] = index;
-        newIndex++;
+  const checkFormattingIndexes = (markedArray) => {
+    let indexArray = { bold: [], italics: [] };
+    let boldIndex = 0;
+    let italicsIndex = 0;
+    markedArray.forEach((value, index) => {
+      if (value === "b") {
+        indexArray["bold"][boldIndex] = index;
+        boldIndex++;
+      } else if (value === "i") {
+        indexArray["italics"][italicsIndex] = index;
+        italicsIndex++;
       }
     });
     return indexArray;
   };
 
-  const createIndexesToAction = (indexArray) => {
-    let indexesToAdjust = [];
-    let indexesToRemove1 = [];
-    let indexesToRemove2 = [];
-    indexesToAdjust = indexArray.map((element) => element + 1);
-    indexesToRemove1 = indexArray;
-    indexesToRemove2 = indexArray.map((element) => element + 2);
-    return [indexesToAdjust, indexesToRemove1, indexesToRemove2];
+  const createIndexesToActionNew = (formattingIndexArray) => {
+    let indexesToBold = [];
+    let indexesToItalics = [];
+    let indexesToRemove = [];
+
+    indexesToBold = formattingIndexArray.bold.map((element) => element + 1);
+    indexesToItalics = formattingIndexArray.italics.map(
+      (element) => element + 1
+    );
+    formattingIndexArray.bold.forEach((element) =>
+      indexesToRemove.push(element)
+    );
+    formattingIndexArray.bold.forEach((element) =>
+      indexesToRemove.push(element + 2)
+    );
+    formattingIndexArray.italics.forEach((element) =>
+      indexesToRemove.push(element)
+    );
+    formattingIndexArray.italics.forEach((element) =>
+      indexesToRemove.push(element + 2)
+    );
+
+    return [indexesToBold, indexesToItalics, indexesToRemove];
   };
 
-  const markedArray = createMarkedArray(arraySplittedByEnds);
+  const markedArray = createMarkedArray(arraySplittedByEndsNew);
+  const formattingIndexArray = checkFormattingIndexes(markedArray);
 
-  const boldIndexesOfMarkedArray = checkIndexesof(markedArray, "b");
-  console.log(createIndexesToAction(boldIndexesOfMarkedArray));
+  const indexesForActionArray = createIndexesToActionNew(formattingIndexArray);
 
-  const markedArray2 = createIndexesToAction(boldIndexesOfMarkedArray);
-  const printElement2 = (element, index, formatSymbol, formatArray) => {
-    const indexesToAdjust = formatArray[0];
-    const indexesToRemove1 = formatArray[1];
-    const indexesToRemove2 = formatArray[2];
-    if (indexesToAdjust.includes(index)) {
-      return formatSymbol === "b" ? (
+  const printElement = (element, index, formatArray) => {
+    const indexesToBold = formatArray[0];
+    const indexesToItalics = formatArray[1];
+    const indexesToRemove = formatArray[2];
+    if (indexesToBold.includes(index)) {
+      return (
         <span key={index}>
           <b>{element}</b>
         </span>
-      ) : formatSymbol === "i" ? (
+      );
+    } else if (indexesToItalics.includes(index)) {
+      return (
         <span key={index}>
           <i>{element}</i>
         </span>
-      ) : (
-        <span key={index}>{element}</span>
       );
-    } else if (indexesToRemove1.includes(index)) {
-      return;
-    } else if (indexesToRemove2.includes(index)) {
+    } else if (indexesToRemove.includes(index)) {
       return;
     } else {
       return <span key={index}>{element}</span>;
@@ -87,7 +97,7 @@ export default function NewTextFormatter(props) {
   return (
     <div>
       {markedArray.map((element, index) =>
-        printElement2(element, index, "b", markedArray2)
+        printElement(element, index, indexesForActionArray)
       )}
     </div>
   );
